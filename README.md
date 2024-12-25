@@ -1,6 +1,7 @@
 ## 简介
 这个仓库是用来储存 medmnist 3D医学影像多分类的代码
 checkpoints是用来储存最好的模型结果的，将最好的模型放在project中做实时分类。
+项目合作者 @yezi77777-yeye ![github主页](https://github.com/yezi77777-yeye)
 
 ![框架图](./pic/first.png)  
 
