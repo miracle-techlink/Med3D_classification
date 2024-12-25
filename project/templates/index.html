@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医学器官图像识别系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>医学器官图像识别系统</h1>
+            <p class="subtitle">基于深度学习的医学器官识别</p>
+        </header>
+
+        <main>
+            <!-- 上传区域 -->
+            <section class="upload-section">
+                <div class="upload-area" id="dropZone">
+                    <div class="upload-content">
+                        <img src="{{ url_for('static', filename='images/upload-icon.png') }}" 
+                             alt="上传图标" 
+                             class="upload-icon">
+                        <p>将图片拖放到此处或点击上传</p>
+                        <p class="upload-hint">支持格式：JPG、PNG、JPEG</p>
+                    </div>
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                </div>
+            </section>
+
+            <!-- 预览区域 -->
+            <section class="preview-section">
+                <div id="preview" style="display: none;">
+                    <h3>预览图片</h3>
+                    <div class="preview-container">
+                        <img id="previewImage" src="" alt="预览图片">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 结果显示区域 -->
+            <section class="result-section">
+                <div id="result" class="result-area">
+                    <!-- 预测结果将在这里显示 -->
+                </div>
+            </section>
+
+            <!-- 示例图片区域 -->
+            <section class="examples-section">
+                <h3>示例图片</h3>
+                <div class="examples-info">
+                    <p>可以直接拖拽下方示例图片到上传区域进行测试</p>
+                </div>
+                <div class="examples-grid">
+                    {% for image in examples %}
+                    <div class="example-item">
+                        <img src="{{ url_for('static', filename='images/examples/' + image) }}" 
+                             alt="示例图片"
+                             draggable="true"
+                             data-filename="{{ image }}">
+                        <div class="example-label">
+                            示例{{ loop.index }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </main>
+
+        <!-- 器官类别说明 -->
+        <section class="organ-info">
+            <h3>可识别的器官类别</h3>
+            <div class="organ-grid">
+                <div class="organ-item">肝脏</div>
+                <div class="organ-item">右肾</div>
+                <div class="organ-item">左肾</div>
+                <div class="organ-item">右股骨</div>
+                <div class="organ-item">左股骨</div>
+                <div class="organ-item">膀胱</div>
+                <div class="organ-item">心脏</div>
+                <div class="organ-item">右肺</div>
+                <div class="organ-item">左肺</div>
+                <div class="organ-item">脾脏</div>
+                <div class="organ-item">胰腺</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 医学器官图像识别系统 - 基于深度学习的医学影像分析</p>
+        </footer>
+    </div>
+
+    <!-- 加载动画 -->
+    <div id="loading" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>正在分析图片...</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
