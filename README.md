@@ -40,8 +40,6 @@ python app.py
 ## 数据集
 数据集为[Medmnist]
 
-## 模型
-模型为[ResNet50]
 
 ## 参考
 [ResNet50](https://github.com/pytorch/vision/blob/main/torchvision/models/resnet.py)
