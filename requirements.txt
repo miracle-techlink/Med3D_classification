@@ -1,0 +1,10 @@
+numpy==1.21.2
+torch==1.13.0
+torchvision==0.14.0
+tqdm==4.62.3
+Pillow==8.4.0
+matplotlib==3.4.3
+flask==2.0.2
+tensorboard==2.7.0
+medmnist==2.2.1
+protobuf==3.20.3
