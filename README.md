@@ -28,8 +28,9 @@ protobuf==3.20.3
 
 ## 数据集
 
-数据集为[Medmnist](https://medmnist.com/)
-Gitcode:[链接](https://gitcode.com/gh_mirrors/me/MedMNIST/overview?utm_source=csdn_github_accelerator&isLogin=1)
+>- 数据集为[Medmnist](https://medmnist.com/)
+>- Gitcode:[链接](https://gitcode.com/gh_mirrors/me/MedMNIST/overview?utm_source=csdn_github_accelerator&isLogin=1)
+
 ![框架图](./pic/data_show.png)  
 ![框架图](./pic/data_all.png)  
 
