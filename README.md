@@ -40,6 +40,11 @@ protobuf==3.20.3
 
 ![框架图](./pic/resnet_bannner.png)  
 
+## 预训练权重
+我们使用的是Tencent/Medicalnet的预训练权重[链接](https://gitcode.com/gh_mirrors/me/MedMNIST/overview?utm_source=csdn_github_accelerator&isLogin=1)。
+
+将其下载下来放在pretrain文件夹中。
+
 ## 运行
 
 启动环境：（配置自己的gpu环境）
